@@ -1,1 +1,1 @@
-print "foo"
+import fs
