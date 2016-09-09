@@ -21,5 +21,5 @@ print str("Meal $"+str(cost))
 print str("+Tax $"+str(tax))
 print str("+Tip $"+str(tip))
 print str("Ttl: $"+str(total))
-print str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
+print str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhal
 fs.save(thedate.month+"-"+thedate.day+"-"+thedate.year,name+".txt",["Name: "+name,"Date: "+str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf,"Meal: $"+str(cost),"Tax: $"+str(tax)"Tip: $"+str(tip),"Total: $"+str(total)])
