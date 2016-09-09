@@ -1,0 +1,17 @@
+import datetime
+thetime = datetime.datetime.now().time()
+thedate = datetime.datetime.now().date()
+hour = thetime.hour
+dayhalf = "AM"
+if hour > 12:
+    hour = hour - 12
+    dayhalf = "PM"
+minute = thetime.minute
+if minute < 10:
+    minute = "0"+str(minute)
+
+name = raw_input("What is your name?")
+cost = input("What was the cost?")
+tax = cost / 100
+
+print str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
