@@ -1,8 +1,8 @@
 def read(name):
 	try:
 		with open('C:/path/numbers.txt','r') as f:
-    	lines = f.read().splitlines()
-    f.close()
+    			lines = f.read().splitlines()
+    		f.close()
 		return lines
 	except:
 		print("#ERROR @ FS.read")
@@ -24,6 +24,6 @@ def exists(pathIn):
 	try:
 		output = os.path.isfile(pathIn)
 		return output
-  except:
+	except:
 		print("#ERROR @ FS.exists")
 		return "#ERROR"
