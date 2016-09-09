@@ -10,8 +10,11 @@ minute = thetime.minute
 if minute < 10:
     minute = "0"+str(minute)
 
-name = raw_input("What is your name?")
-cost = input("What was the cost?")
-tax = cost / 100
-
+name = raw_input("What is the name?\n")
+cost = input("What was the cost?\n")
+print str(name+":")
+print str("Meal $"+cost)
+print str("+Tax $"+str(cost*0.07))
+print str("+Tip $"+str(cost*0.15))
+print str("Ttl: $"+str(cost*0.22))
 print str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
