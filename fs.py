@@ -11,7 +11,12 @@ def read(name):
 def save(name,parameters)
 	try:
 		f = open(name,"w")
-		for i,1   
+		t = 0
+		while t < len(parameters):
+			f.write(parameters[t]+"\n")
+			t = t + 1
+		f.close()
+		return "#Success!"
 	except:
 		print("#ERROR @ FS.save")
 		return("#ERROR")
