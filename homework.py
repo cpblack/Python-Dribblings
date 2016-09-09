@@ -5,11 +5,11 @@ thedate = datetime.datetime.now().date()
 hour = thetime.hour
 dayhalf = "AM"
 if hour > 12:
-    hour = hour - 12
-    dayhalf = "PM"
+	hour = hour - 12
+	dayhalf = "PM"
 minute = thetime.minute
 if minute < 10:
-    minute = "0"+str(minute)
+	minute = "0"+str(minute)
 
 name = raw_input("What is the name?\n")
 cost = input("What was the cost?\n")
