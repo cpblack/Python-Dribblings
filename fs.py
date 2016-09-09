@@ -1,6 +1,6 @@
 def read(name):
 	try:
-		with open('C:/path/numbers.txt','r') as f:
+		with open(name,'r') as f:
     			lines = f.read().splitlines()
     		f.close()
 		return lines
@@ -8,7 +8,7 @@ def read(name):
 		print("#ERROR @ FS.read")
 		return "#ERROR"
 
-def save(name,parameters)
+def save(name,parameters):
 	try:
 		f = open(name,"w")
 		t = 0
