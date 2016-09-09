@@ -19,4 +19,4 @@ print str("+Tax $"+str(cost*0.07))
 print str("+Tip $"+str(cost*0.15))
 print str("Ttl: $"+str(cost*0.22))
 print str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
-fs.save(thedate.month+"-"+thedate.day+"-"+thedate.year,name)
+fs.save(thedate.month+"-"+thedate.day+"-"+thedate.year,name+".txt")
