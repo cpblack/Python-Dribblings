@@ -43,8 +43,8 @@ def receipt():
 	tax = fs.read("config.txt")
 	tip = tax[1]
 	tax = tax[0]
-	tax = float(tax[5:]) * cost
-	tip = float(tip[5:]) * cost
+	tax = float(tax[5:])/100 * cost
+	tip = float(tip[5:])/100 * cost
 	total = cost + tax + tip
 	print str("\n-- "+name+" --")
 	print "Server: "+server
