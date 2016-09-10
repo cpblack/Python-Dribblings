@@ -1,6 +1,6 @@
 import datetime
 import fs
-while True:
+def receipt():
 	name = raw_input("What is the name?\n")
 	cost = input("What was the cost?\n")
 	thetime = datetime.datetime.now().time()
