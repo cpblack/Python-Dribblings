@@ -1,5 +1,7 @@
 import fs
-logFolder = "logs"
+logFolder = fs.read("config.txt")
+logFolder = logFolder[2]
+logFolder = logFolder[10:]
 items = fs.get(logFolder)
 
 
