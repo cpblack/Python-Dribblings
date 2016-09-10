@@ -1,7 +1,9 @@
 import datetime
 import fs
 import os
-logFolder = "logs"
+logFolder = fs.read("config.txt")
+logFolder = logFolder[0]
+logFolder = logFolder[10:]
 
 if not os.path.exists(logFolder):
 		try:
