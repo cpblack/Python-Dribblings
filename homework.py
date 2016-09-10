@@ -6,7 +6,7 @@ if not os.path.exists(logFolder):
 			os.makedirs(logFolder)
 		except OSError as exc: 
 			if exc.errno != errno.EEXIST:
-            			raise
+				raise
 def receipt():
 	name = ""
 	while name == "":
