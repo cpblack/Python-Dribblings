@@ -46,7 +46,12 @@ def receipt():
 	print printeddate
 	print "================"
 	filename = str(thedate.month)+"-"+str(thedate.day)+"-"+str(thedate.year)+" "+str(hour)+"."+str(minute)+dayhalf+" "+name+".txt"
-	fs.save(logFolder+"/"+filename,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total)])
+	copynumber = 0
+	copytag = ""
+	while os.path.exists(logFolder+"/"+filename+copytag):
+		copynumber = copynumber + 1
+		copytag = " ("+copynumber+")"
+	fs.save(logFolder+"/"+filename+copytag,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total)])
 try:
 	while True:
 		receipt()
