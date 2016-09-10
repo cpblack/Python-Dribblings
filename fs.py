@@ -1,3 +1,4 @@
+import os
 def read(name):
 	try:
 		with open(name,'r') as f:
