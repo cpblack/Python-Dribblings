@@ -50,7 +50,7 @@ def receipt():
 	copytag = ""
 	while os.path.exists(logFolder+"/"+filename+copytag):
 		copynumber = copynumber + 1
-		copytag = " ("+copynumber+")"
+		copytag = " ("+str(copynumber)+")"
 	fs.save(logFolder+"/"+filename+copytag,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total)])
 try:
 	while True:
