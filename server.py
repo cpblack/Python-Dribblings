@@ -12,7 +12,7 @@ def analyzeServer(nameIn):
             item = fs.readreceipt(logFolder+"/"+items[t])
             if item[6] == nameIn:
                 serverTotal = serverTotal + float(item[2])
-                serverTips = serverTotal + float(item[4])
+                serverTips = serverTips + float(item[4])
             t = t + 1
     else:
         print("#Error: No logs.")
