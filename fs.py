@@ -11,9 +11,10 @@ def read(name):
 
 def save(name,parameters):
 	try:
-		if not os.path.exists(os.path.dirname(name)):
+		c = os.path.dirname(name)
+		if not os.path.exists(c) and c != '':
 			try:
-				os.makedirs(os.path.dirname(name))
+				os.makedirs(c)
 			except OSError as exc:
 				if exc.errno != errno.EEXIST:
             				raise
