@@ -1,6 +1,15 @@
 import fs
 logFolder = "logs"
 items = fs.get(logFolder)
+server = [['Jane',0.00]]
+def findServer(nameIn):
+    myOutput = False
+    t = 0
+    while t < len(server):
+        if myOutut == False and server[t][0] == nameIn:
+            output = t
+        t = t + 1
+
 if items != False and len(items) > 0:
     t = 0
     while t < len(items):
