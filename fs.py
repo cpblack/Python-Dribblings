@@ -10,6 +10,12 @@ def read(name):
 
 def save(name,parameters):
 	try:
+			if not os.path.exists(os.path.dirname(name)):
+		try:
+			os.makedirs(os.path.dirname(name))
+		except OSError as exc:
+			if exc.errno != errno.EEXIST:
+            			raise
 		f = open(name,"w")
 		t = 0
 		while t < len(parameters):
