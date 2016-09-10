@@ -42,8 +42,7 @@ while t < len(logs):
 print "Gross: $"+str(ftotal)
 serverkeys = servers.keys()
 t = 0
-while t < len(serverkeys) {
+while t < len(serverkeys) :
 	print(serverkeys[t]+" generated "+servers[t]+" for the company.")
 	t = t + 1
-}
 input("Press Enter to continue...\n")
