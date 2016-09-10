@@ -25,4 +25,4 @@ while t < len(logs):
         ftotal = ftotal + float(check[5])
         t = t + 1
 print "Gross: $"+str(ftotal)
-input("Press Enter to continue...")
+input("Press Enter to continue...\n")
