@@ -9,7 +9,7 @@ def read(name):
 		print("#ERROR @ FS.read")
 		return "#ERROR"
 def readreceipt(name):
-	myfile = fs.read(name)
+	myfile = read(name)
 	name = myfile[0]
 	name = name[6:]
 	date = myfile[1]
