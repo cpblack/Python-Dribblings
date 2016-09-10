@@ -1,6 +1,9 @@
 import os
 import fs
-logFolder = "logs"
+logFolder = fs.read("config.txt")
+logFolder = logFolder[0]
+logFolder = logFolder[10:]
+
 def readreceipt(name):
 	myfile = fs.read(name)
 	name = myfile[0]
