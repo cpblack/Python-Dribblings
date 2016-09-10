@@ -1,3 +1,4 @@
 import fs
-items = fs.get("")
-print items[0]
+items = fs.get("logs")
+if items != False:
+  print items[0]
