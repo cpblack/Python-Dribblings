@@ -1,7 +1,9 @@
 import datetime
 import fs
 def receipt():
-	name = raw_input("What is the name?\n")
+	name = ""
+	while name == "":
+		name = raw_input("What is the name?\n")
 	cost = "false"
 	while isnumeric(cost) == False:
 		cost = raw_input("What was the cost?\n")
