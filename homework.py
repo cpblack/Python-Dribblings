@@ -20,6 +20,7 @@ def receipt():
 	name = ""
 	while name == "":
 		name = raw_input("What is the name?\n")
+	name = name.title()
 	cost = "false"
 	while isnumber(cost) == False:
 		cost = raw_input("What was the cost?\n")
@@ -37,7 +38,7 @@ def receipt():
 	tax = cost * 0.07
 	tip = cost * 0.15
 	total = cost + tax + tip
-	print str("--"+name+"--")
+	print str("-- "+name+" --")
 	print str("Meal  $"+str(cost))
 	print str("+Tax  $"+str(tax))
 	print str("+Tip  $"+str(tip))
