@@ -28,7 +28,7 @@ def receipt():
 	print str("Ttl:  $"+str(total))
 	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
 	print printeddate
-	filename = "logs/"+thedate.month+"⧸"+thedate.day+"⧸"+thedate.year" "+hour+"꞉"+minute+" "+name+".tx"
+	filename = "logs/"+thedate.month+"⧸"+thedate.day+"⧸"+thedate.year" "+hour+"꞉"+minute+" "+name+".txt"
 	if not os.path.exists(os.path.dirname(filename)):
 		try:
 			os.makedirs(os.path.dirname(filename))
