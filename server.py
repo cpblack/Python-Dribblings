@@ -3,7 +3,7 @@ logFolder = "logs"
 items = fs.get(logFolder)
 global server
 server = []
-server[0] = ['Jane',0.00]
+server.append(['Jane',0.00])
 def findServer(nameIn):
     global server
     myOutput = False
