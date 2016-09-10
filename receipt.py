@@ -5,6 +5,8 @@ logFolder = fs.read("config.txt")
 logFolder = logFolder[2]
 logFolder = logFolder[10:]
 
+global server
+server = "No server."
 if not os.path.exists(logFolder):
 		try:
 			os.makedirs(logFolder)
@@ -19,6 +21,7 @@ def isnumber(s):
 		return False
 
 def receipt():
+	global server
 	name = ""
 	while name == "":
 		name = raw_input("What is the name?\n")
@@ -44,6 +47,7 @@ def receipt():
 	tip = tip[5:] * cost
 	total = cost + tax + tip
 	print str("\n-- "+name+" --")
+	print "Server: "+server
 	print str("Meal  $"+str(cost))
 	print str("+Tax  $"+str(tax))
 	print str("+Tip  $"+str(tip))
@@ -57,8 +61,11 @@ def receipt():
 	while os.path.exists(logFolder+"/"+filename+copytag+".txt"):
 		copynumber = copynumber + 1
 		copytag = " ("+str(copynumber)+")"
-	fs.save(logFolder+"/"+filename+copytag+".txt",["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total)])
+	fs.save(logFolder+"/"+filename+copytag+".txt",["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total),"Server: "+server])
+
 try:
+	server = raw_input("Please enter server name.")
+	server = server.title()
 	while True:
 		receipt()
 except:
