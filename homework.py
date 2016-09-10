@@ -1,5 +1,6 @@
 import datetime
 import fs
+import os
 logFolder = "logs"
 if not os.path.exists(logFolder):
 		try:
