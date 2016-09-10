@@ -8,7 +8,11 @@ def read(name):
 	except:
 		print("#ERROR @ FS.read")
 		return "#ERROR"
-
+def get(folder)
+	output = False
+	if os.path.exists(folder):
+		output = [f for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))]
+	return output
 def readreceipt(name):
 	myfile = read(name)
 	name = myfile[0]
