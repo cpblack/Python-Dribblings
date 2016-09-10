@@ -8,20 +8,20 @@ def readreceipt(name):
 	date = myfile[1]
 	date = date[6:]
 	meal = myfile[2]
-	meal = meal[6:]
+	meal = meal[7:]
 	tax = myfile[3]
-	tax = tax[5:]
+	tax = tax[6:]
 	tip = myfile[4]
-	tip = tip[5:]
-	total = myfile[6]
-	total = total[6:]
+	tip = tip[6:]
+	total = myfile[5]
+	total = total[8:]
 	return [name,date,meal,tax,tip,total]
 
 logs = [f for f in os.listdir(logFolder) if os.path.isfile(os.path.join(logFolder, f))]
 t = 0
-total = 0.0
+ftotal = 0.0
 while t < len(logs):
-        check = readreceipt(logs[t])
-        total = total + check[4]
+        check = readreceipt(logFolder+"/"+logs[t])
+        ftotal = ftotal + float(check[5])
         t = t + 1
-print "Gross: "+total
+print "Gross: "+str(ftotal)
