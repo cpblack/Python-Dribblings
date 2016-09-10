@@ -1,7 +1,7 @@
 import os
 import fs
 logFolder = fs.read("config.txt")
-logFolder = logFolder[0]
+logFolder = logFolder[2]
 logFolder = logFolder[10:]
 
 def readreceipt(name):
