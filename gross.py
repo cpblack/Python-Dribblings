@@ -10,7 +10,7 @@ logs = [f for f in os.listdir(logFolder) if os.path.isfile(os.path.join(logFolde
 t = 0
 ftotal = 0.0
 while t < len(logs):
-        check = readreceipt(logFolder+"/"+logs[t])
+        check = fs.readreceipt(logFolder+"/"+logs[t])
         ftotal = ftotal + float(check[5])
         t = t + 1
 print "Gross: $"+str(ftotal)
