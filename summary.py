@@ -24,4 +24,4 @@ while t < len(logs):
         check = readreceipt(logFolder+"/"+logs[t])
         ftotal = ftotal + float(check[5])
         t = t + 1
-print "Gross: "+str(ftotal)
+print "Gross: $"+str(ftotal)
