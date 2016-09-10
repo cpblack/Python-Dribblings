@@ -2,18 +2,18 @@ import os
 import fs
 logFolder = "logs"
 def readreceipt(name):
-	file = fs.read(name)
-	name = file[0]
+	myfile = fs.read(name)
+	name = myfile[0]
 	name = name[6:]
-	date = file[1]
+	date = myfile[1]
 	date = date[6:]
-	meal = file[2]
+	meal = myfile[2]
 	meal = meal[6:]
-	tax = file[3]
+	tax = myfile[3]
 	tax = tax[5:]
-	tip = file[4]
+	tip = myfile[4]
 	tip = tip[5:]
-	total = file[6]
+	total = myfile[6]
 	total = total[6:]
 	return [name,date,meal,tax,tip,total]
 
