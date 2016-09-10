@@ -42,6 +42,7 @@ def receipt():
 	print str("+Tax  $"+str(tax))
 	print str("+Tip  $"+str(tip))
 	print str("Ttl:  $"+str(total))
+	print "================"
 	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+str(minute)+dayhalf
 	print printeddate
 	filename = str(thedate.month)+"-"+str(thedate.day)+"-"+str(thedate.year)+" "+str(hour)+"."+str(minute)+dayhalf+" "+name+".txt"
