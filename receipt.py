@@ -64,7 +64,7 @@ def receipt():
 	fs.save(logFolder+"/"+filename+copytag+".txt",["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total),"Server: "+server])
 
 try:
-	server = raw_input("Please enter server name.")
+	server = raw_input("Please enter server name.\n")
 	server = server.title()
 	while True:
 		receipt()
