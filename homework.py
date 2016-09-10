@@ -24,3 +24,5 @@ def receipt():
 	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
 	print printeddate
 	fs.save(thedate.month+"⧸"+thedate.day+"⧸"+thedate.year" "+hour+"꞉"+minute+" "+name+".txt",["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax)"Tip: $"+str(tip),"Total: $"+str(total)])
+while True:
+	receipt()
