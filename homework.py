@@ -2,7 +2,10 @@ import datetime
 import fs
 def receipt():
 	name = raw_input("What is the name?\n")
-	cost = input("What was the cost?\n")
+	cost = "false"
+	while isnumeric(cost) == False:
+		cost = raw_input("What was the cost?\n")
+	cost = float(cost)
 	thetime = datetime.datetime.now().time()
 	thedate = datetime.datetime.now().date()
 	hour = thetime.hour
