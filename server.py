@@ -16,6 +16,7 @@ if items != False and len(items) > 0:
         item = fs.readreceipt(logFolder+"/"+items[t])
         print(item[5])
         t = t + 1
+    print(str(findServer('Jane')))
 else:
     print("#Error: No logs.")
 raw_input("Press enter to continue...")
