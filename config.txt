@@ -1,3 +1,3 @@
 tax: 7
 tip: 15
-Log-Path: jesus
+Log-Path: logs
