@@ -2,18 +2,26 @@ import datetime
 import fs
 import os
 logFolder = "logs"
+
 if not os.path.exists(logFolder):
 		try:
 			os.makedirs(logFolder)
 		except OSError as exc: 
 			if exc.errno != errno.EEXIST:
 				raise
+def isnumber(s):
+	try:
+		float(s)
+		return True
+	except ValueError:
+		return False
+
 def receipt():
 	name = ""
 	while name == "":
 		name = raw_input("What is the name?\n")
 	cost = "false"
-	while isnumeric(cost) == False:
+	while isnumber(cost) == False:
 		cost = raw_input("What was the cost?\n")
 	cost = float(cost)
 	thetime = datetime.datetime.now().time()
@@ -34,7 +42,7 @@ def receipt():
 	print str("+Tax  $"+str(tax))
 	print str("+Tip  $"+str(tip))
 	print str("Ttl:  $"+str(total))
-	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
+	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+str(minute)+dayhalf
 	print printeddate
 	filename = logFolder+thedate.month+"⧸"+thedate.day+"⧸"+thedate.year+" "+hour+"꞉"+minute+" "+name+".txt"
 	fs.save(filename,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax)+"Tip: $"+str(tip),"Total: $"+str(total)])
