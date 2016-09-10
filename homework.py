@@ -45,7 +45,7 @@ def receipt():
 	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+str(minute)+dayhalf
 	print printeddate
 	filename = str(thedate.month)+"⧸"+str(thedate.day)+"⧸"+str(thedate.year)+" "+str(hour)+"꞉"+str(minute)+" "+name+".txt"
-	fs.save(logFolder+"/"+filename,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax)+"Tip: $"+str(tip),"Total: $"+str(total)])
+	fs.save(logFolder+"/"+filename,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax),"Tip: $"+str(tip),"Total: $"+str(total)])
 try:
 	while True:
 		receipt()
