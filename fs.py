@@ -2,7 +2,7 @@ import os
 def read(name):
 	try:
 		with open(name,'r') as f:
-			lines = f.read().splitlines()
+			lines = f.read().splitlines().rstrip("\n")
 		f.close()
 		return lines
 	except:
