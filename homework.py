@@ -37,7 +37,7 @@ def receipt():
 	tax = cost * 0.07
 	tip = cost * 0.15
 	total = cost + tax + tip
-	print str(name+":")
+	print str("--"+name+"--")
 	print str("Meal  $"+str(cost))
 	print str("+Tax  $"+str(tax))
 	print str("+Tip  $"+str(tip))
