@@ -34,15 +34,6 @@ servers = []
 while t < len(logs):
         check = readreceipt(logFolder+"/"+logs[t])
         ftotal = ftotal + float(check[5])
-        
-        if not isnumber(servers[check[6]]):
-        	servers[check[6]] = 0.0
-        servers[check[6]] = servers[check[6]] + check[5]
         t = t + 1
 print "Gross: $"+str(ftotal)
-serverkeys = servers.keys()
-t = 0
-while t < len(serverkeys) :
-	print(serverkeys[t]+" generated "+servers[t]+" for the company.")
-	t = t + 1
 input("Press Enter to continue...\n")
