@@ -37,8 +37,11 @@ def receipt():
 	minute = thetime.minute
 	if minute < 10:
 		minute = "0"+str(minute)
-	tax = cost * 0.07
-	tip = cost * 0.15
+	tax = fs.read("config.txt")
+	tip = tax[1]
+	tax = tax[0]
+	tax = tax[5:] * cost
+	tip = tip[5:] * cost
 	total = cost + tax + tip
 	print str("\n-- "+name+" --")
 	print str("Meal  $"+str(cost))
