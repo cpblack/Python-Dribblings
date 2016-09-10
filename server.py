@@ -1,8 +1,11 @@
 import fs
 logFolder = "logs"
 items = fs.get(logFolder)
-server = [['Jane',0.00]]
+global server
+server = []
+server[0] = ['Jane',0.00]
 def findServer(nameIn):
+    global server
     myOutput = False
     t = 0
     while t < len(server):
