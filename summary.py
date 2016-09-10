@@ -18,7 +18,9 @@ def readreceipt(name):
 	tip = tip[6:]
 	total = myfile[5]
 	total = total[8:]
-	return [name,date,meal,tax,tip,total]
+	server = myfile[6]
+	server = server[8:]
+	return [name,date,meal,tax,tip,total,server]
 
 logs = [f for f in os.listdir(logFolder) if os.path.isfile(os.path.join(logFolder, f))]
 t = 0
