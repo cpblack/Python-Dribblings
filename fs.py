@@ -8,7 +8,23 @@ def read(name):
 	except:
 		print("#ERROR @ FS.read")
 		return "#ERROR"
-
+def readreceipt(name):
+	myfile = fs.read(name)
+	name = myfile[0]
+	name = name[6:]
+	date = myfile[1]
+	date = date[6:]
+	meal = myfile[2]
+	meal = meal[7:]
+	tax = myfile[3]
+	tax = tax[6:]
+	tip = myfile[4]
+	tip = tip[6:]
+	total = myfile[5]
+	total = total[8:]
+	server = myfile[6]
+	server = server[8:]
+	return [name,date,meal,tax,tip,total,server]
 def save(name,parameters):
 	try:
 		c = os.path.dirname(name)
