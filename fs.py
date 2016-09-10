@@ -1,8 +1,8 @@
 def read(name):
 	try:
 		with open(name,'r') as f:
-    			lines = f.read().splitlines()
-    		f.close()
+			lines = f.read().splitlines()
+		f.close()
 		return lines
 	except:
 		print("#ERROR @ FS.read")
