@@ -28,7 +28,15 @@ def receipt():
 	print str("Ttl:  $"+str(total))
 	printeddate = str(thedate.month)+"/"+str(thedate.day)+"/"+str(thedate.year)+", "+str(hour)+":"+minute,dayhalf
 	print printeddate
-	fs.save("logs/"+thedate.month+"⧸"+thedate.day+"⧸"+thedate.year" "+hour+"꞉"+minute+" "+name+".txt",["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax)"Tip: $"+str(tip),"Total: $"+str(total)])
+	filename = "logs/"+thedate.month+"⧸"+thedate.day+"⧸"+thedate.year" "+hour+"꞉"+minute+" "+name+".tx"
+	if not os.path.exists(os.path.dirname(filename)):
+		try:
+			os.makedirs(os.path.dirname(filename))
+		except OSError as exc: # Guard against race condition
+			if exc.errno != errno.EEXIST:
+            			raise
+
+	fs.save(filename,["Name: "+name,"Date: "+printeddate,"Meal: $"+str(cost),"Tax: $"+str(tax)"Tip: $"+str(tip),"Total: $"+str(total)])
 try:
 	while True:
 		receipt()
