@@ -6,7 +6,8 @@ def findServer(nameIn):
     myOutput = False
     t = 0
     while t < len(server):
-        if myOutut == False and server[t][0] == nameIn:
+        target = server[t]
+        if myOutput == False and target[0] == nameIn:
             output = t
         t = t + 1
 
