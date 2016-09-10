@@ -19,6 +19,7 @@ def analyzeServer(nameIn):
     return [serverTotal,serverTips]
 while True:
     serverTarget = raw_input("Analyze Which Server?\n")
+    serverTarget = serverTarget.title()
     serverProceeds = analyzeServer(serverTarget)
     print(serverTarget+" made $"+str(serverProceeds[0])+" for the restaraunt, and $"+str(serverProceeds[1])+" in tips.")
 raw_input("Press enter to continue...")
