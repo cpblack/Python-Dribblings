@@ -17,3 +17,5 @@ def decode(stringIn,layers):
     while m[-1:] == "=":
         m = m[:-1]
     return m
+def smartdecode():
+    
