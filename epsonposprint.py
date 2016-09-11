@@ -1,4 +1,6 @@
 # Dependant on Library found Here: https://github.com/python-escpos/python-escpos
+def setup:
+	return None
 def printReceipt(tableIn):
 	t = 0
 	while t < len(tableIn):
