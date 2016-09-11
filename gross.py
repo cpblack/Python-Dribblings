@@ -10,7 +10,7 @@ if os.path.exists(logFolder):
 	ftotal = 0.0
 	while t < len(logs):
 		check = fs.readreceipt(logFolder+"/"+logs[t])
-		ftotal = ftotal + float(check[5])
+		ftotal = ftotal + float(check[3])
 		t = t + 1
 	print("Gross: $"+str(ftotal))
 else:
