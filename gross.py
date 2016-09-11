@@ -12,7 +12,7 @@ if os.path.exists(logFolder):
 		check = fs.readreceipt(logFolder+"/"+logs[t])
 		ftotal = ftotal + float(check[3])
 		t = t + 1
-	print("Gross: $"+str(ftotal))
+	print("Income (w/o tips & sales tax): $"+str(ftotal))
 else:
 	print("Log Folder Non-Existant.")
 
