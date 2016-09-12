@@ -1,4 +1,5 @@
 # Dependant on Library found Here: https://github.com/python-escpos/python-escpos
+from escpos.printer import Usb
 def setup:
 	return None
 def printReceipt(tableIn):
