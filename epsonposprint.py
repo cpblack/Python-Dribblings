@@ -7,6 +7,7 @@ def config():
 def setup():
 	return None
 def printReceipt(tableIn):
+	p = no idea
 	t = 0
 	while t < len(tableIn):
 		p.text(tableIn[t]+"\n")
