@@ -2,6 +2,7 @@
 #September 5th 2016
 #Script Core
 import os
+import sys
 def getconfig():
 	if exists("config.txt") == False:
 		save("config.txt",["tax: 7","tip: 15", "Log-Path: logs"])
@@ -71,3 +72,7 @@ def exists(pathIn):
 	except:
 		print("#ERROR @ FS.exists")
 		return "#ERROR"
+
+if os.path.basename(sys.argv[0]) == "fs.py":
+        print("Not for Human Consumption!")
+        raw_input("Press enter to continue...\n")
