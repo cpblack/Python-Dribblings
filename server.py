@@ -1,11 +1,12 @@
 import fs
-logFolder = fs.read("config.txt")
-logFolder = logFolder[2]
-logFolder = logFolder[10:]
+config = fs.getconfig()
+global logFolder
+logFolder = config[2]
 items = fs.get(logFolder)
 
 
 def analyzeServer(nameIn):
+    global llogFolder
     serverTotal = 0.0
     serverTips = 0.0
     if items != False and len(items) > 0:
