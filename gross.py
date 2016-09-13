@@ -1,8 +1,7 @@
 import os
 import fs
-logFolder = fs.read("config.txt")
-logFolder = logFolder[2]
-logFolder = logFolder[10:]
+config = fs.getconfig()
+logFolder = config[2]
 
 if os.path.exists(logFolder):
 	logs = [f for f in os.listdir(logFolder) if os.path.isfile(os.path.join(logFolder, f))]
