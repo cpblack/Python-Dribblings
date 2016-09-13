@@ -1,3 +1,6 @@
+#Caleb Black
+#September 5th 2016
+#Server Analyzer
 import fs
 config = fs.getconfig()
 global logFolder
