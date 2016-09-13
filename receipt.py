@@ -3,6 +3,9 @@ import fs
 import os
 #import epsonprinterpos as printer
 config = fs.getconfig()
+global tax
+global tip
+global logFolder
 logFolder = config[2]
 tax = config[0]
 tip = config[1]
@@ -24,6 +27,9 @@ def isnumber(s):
 
 def receipt():
 	global server
+	global tax
+	global tip
+	global logFolder
 	name = ""
 	while name == "":
 		name = raw_input("What is the name?\n")
