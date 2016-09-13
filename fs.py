@@ -75,4 +75,4 @@ def exists(pathIn):
 
 if os.path.basename(sys.argv[0]) == "fs.py":
         print("Not for Human Consumption!")
-        raw_input("Press enter to continue...\n")
+        raw_input("Press enter to leave... NOW!\n")
