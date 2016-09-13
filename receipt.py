@@ -4,6 +4,8 @@ import os
 import epsonprinterpos as printer
 config = fs.getconfig()
 logFolder = config[2]
+tax = config[0]
+tip = config[1]
 
 global server
 server = "No server."
@@ -40,11 +42,8 @@ def receipt():
 	minute = thetime.minute
 	if minute < 10:
 		minute = "0"+str(minute)
-	tax = fs.read("config.txt")
-	tip = tax[1]
-	tax = tax[0]
-	tax = float(tax[5:])/100 * cost
-	tip = float(tip[5:])/100 * cost
+	tax = float(tax)/100 * cost
+	tip = float(tip)/100 * cost
 	total = cost + tax + tip
 	print str("\n-- "+name+" --")
 	print "Server: "+server
