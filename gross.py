@@ -1,3 +1,6 @@
+#Caleb Black
+#September 5th 2016
+#Gross Calculator
 import os
 import fs
 config = fs.getconfig()
