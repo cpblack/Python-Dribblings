@@ -1,3 +1,6 @@
+#Caleb Black
+#September 5th 2016
+#Receipt Generator
 import datetime
 import fs
 import os
