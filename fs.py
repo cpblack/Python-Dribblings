@@ -1,3 +1,6 @@
+#Caleb Black
+#September 5th 2016
+#Script Core
 import os
 def getconfig():
 	if exists("config.txt") == False:
