@@ -2,9 +2,8 @@ import datetime
 import fs
 import os
 import epsonprinterpos as printer
-logFolder = fs.read("config.txt")
-logFolder = logFolder[2]
-logFolder = logFolder[10:]
+config = fs.getconfig()
+logFolder = config[2]
 
 global server
 server = "No server."
