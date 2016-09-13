@@ -1,7 +1,7 @@
 import datetime
 import fs
 import os
-import epsonprinterpos as printer
+#import epsonprinterpos as printer
 config = fs.getconfig()
 logFolder = config[2]
 tax = config[0]
