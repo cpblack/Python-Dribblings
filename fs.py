@@ -1,4 +1,15 @@
 import os
+def getconfig():
+	if exists("config.txt") == False:
+		save("config.txt",["tax: 7","tip: 15", "Log-Path: logs"])
+	config = read("config.txt")
+	tax = config[0]
+	tax = tax[5:]
+	tip = config[1]
+	tip = tip[5:]
+	logFolder = config[2]
+	logFolder = logFolder[10:]
+	return [tax,tip,logFolder]
 def read(name):
 	try:
 		with open(name,'r') as f:
