@@ -106,13 +106,14 @@ def blend(color1,color2):
     
     return output
 initializeBlends()
-print "red:",red
-print "blue:",blue
-print "green:",green
-print "cyan:",cyan
-print "yellow:",yellow
-print "magenta",magenta
-mix = blend(raw_input("What is the first color?\n"),raw_input("What is the second color?\n"))
-mix = mix.title()
-print "Your combination is",mix+"!"
+while True:
+    print "red:",red
+    print "blue:",blue
+    print "green:",green
+    print "cyan:",cyan
+    print "yellow:",yellow
+    print "magenta",magenta
+    mix = blend(raw_input("What is the first color?\n"),raw_input("What is the second color?\n"))
+    mix = mix.title()
+    print "Your combination is",mix+"!"
 
