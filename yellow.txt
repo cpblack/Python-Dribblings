@@ -1,3 +1,5 @@
 red:orange
 blue:black
 green:chartreuse green
+magenta:red
+violet:rose
