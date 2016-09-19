@@ -112,13 +112,13 @@ while True:
     print "green:",green
     print "cyan:",cyan
     print "yellow:",yellow
-    print "magenta",magenta
+    print "magenta:",magenta
     mix = blend(raw_input("What is the first color?\n"),raw_input("What is the second color?\n"))
     print "Your combination is",mix.title()+"!"
     while mix != "restart" and mix != "null":
         mix = blend(mix, raw_input('Enter another color to continue mixing or type "restart".\n'))
         if mix == "null":
-            print("Mixing Error.")
+            print "Mixing Error."
         else:
             print "Your combination is",mix.title()+"!"
     
