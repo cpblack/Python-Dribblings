@@ -1,0 +1,6 @@
+red:magenta
+green:cyan
+magenta:violet
+cyan:azure
+orange:rose
+yellow:black
