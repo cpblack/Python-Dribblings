@@ -1,5 +1,5 @@
 def check(input):
-    output = "Error/Unknown"
+    output = "Other/Error"
     if input.isalpha():
         output = "error"
         if len(input) == 1:
