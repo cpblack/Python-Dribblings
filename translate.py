@@ -16,5 +16,5 @@ def translate(stringIn):
         t = t + 1
     output = output[1:]
     return output
-input = raw_input()
+input = raw_input("Enter a phrase to translate.\n")
 print translate(input)
