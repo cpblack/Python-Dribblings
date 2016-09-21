@@ -1,0 +1,3 @@
+hello:hola
+tommorow:manana
+all:todos
