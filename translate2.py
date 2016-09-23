@@ -1,4 +1,7 @@
-import fs
+try:
+    import fs
+except:
+    raw_input("FATAL ERROR! fs.py missing, press enter to continue")
 from re import sub as re.sub
 
 def getLanguage():
