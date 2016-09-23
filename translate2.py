@@ -34,11 +34,15 @@ def translate(stringIn):
         t = t + 1
     output = output[1:]
     return output
-    
-global addAll
-global dictionary
-dictionary = fs.interpret(fs.read("translations/"+getLanguage()+".txt"))
-addAll = getAddAll()
-print dictionary
-input = raw_input("Enter a phrase to translate.\n")
-print translate(input)
+
+try:  
+    global addAll
+    global dictionary
+    dictionary = fs.interpret(fs.read("translations/"+getLanguage()+".txt"))
+    addAll = getAddAll()
+    print dictionary
+    while True:
+        input = raw_input("Enter a phrase to translate.\n")
+        print translate(input)
+except:
+    raw_input("Fatal Error! Press enter to continue...\n")
