@@ -3,6 +3,14 @@
 #Script Core
 import os
 import sys
+def interpret(tableIn):
+    t = 0
+    output = {}
+    while t < len(tableIn):
+        temp = tableIn[t].split(":")
+        output[temp[0]] = temp[1]
+        t = t + 1
+    return output
 def getconfig():
 	if exists("config.txt") == False:
 		save("config.txt",["tax: 7","tip: 15", "Log-Path: logs"])
