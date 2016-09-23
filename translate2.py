@@ -2,9 +2,9 @@ import fs
 import re
 
 def getLanguage():
-    language = "in valid"
+    language = "this should not be used as a language name"
     while fs.exists("translations/"+language+".txt") == False:
-        language = raw_input("Please enter the name of your language file located in the Translations folder, the name must be alphanumeric.\n")
+        language = raw_input("Please enter the name of your language file located in the Translations folder\n")
     return 
 def getAddAll():
     addAll = ""
