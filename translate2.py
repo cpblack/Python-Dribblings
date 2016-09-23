@@ -52,7 +52,9 @@ def translate(stringIn):
                 lj = lj[1:]+lj[:1]+"ay"
             output = output + " " + lj
             t = t + 1
-        output = output[1:]
+        output = output.lower()
+        output = output[1:1].upper()+output[2:]
+        
     return output
 
 
