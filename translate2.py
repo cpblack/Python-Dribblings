@@ -45,4 +45,4 @@ try:
         input = raw_input("Enter a phrase to translate.\n")
         print translate(input)
 except:
-    raw_input("Fatal Error! Press enter to continue...\n")
+    raw_input("FATAL ERROR! Press enter to continue...\n")
