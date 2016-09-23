@@ -1,5 +1,5 @@
 import fs
-import re
+from re import sub as re.sub
 
 def getLanguage():
     language = "this should not be used as a language name"
