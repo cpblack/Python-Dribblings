@@ -7,12 +7,12 @@ def getLanguage():
         language = raw_input("Please enter the name of your language file located in the Translations folder\n")
     return 
 def getAddAll():
-    addAll = ""
+    addAllLocal = ""
     global dictionary
     if "*" in dictionary:
-        addAll = dictionary["*"]
+        addAllLocal = dictionary["*"]
         dictionary["*"] = "*"
-    return addAll
+    return addAllLocal
 def translate(stringIn):
     global dictionary
     global addAll
