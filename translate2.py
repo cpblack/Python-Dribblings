@@ -1,8 +1,14 @@
 import fs
 import re
-dictionary = fs.interpret(fs.read("translations.txt"))
+dictionary = fs.interpret(fs.read("translations/"+getLanguage()+".txt"))
 print dictionary
 
+
+def getLanguage()
+    language = "in valid"
+    while fs.exists("translations/"+language+".txt") == False:
+        language = raw_input("Please enter the name of your language file located in the Translations folder, the name must be alphanumeric.\n")
+    return language
 def translate(stringIn):
     stringIn = re.sub(r'([^\s\w]|_)+', '', stringIn)
     output = ""
