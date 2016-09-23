@@ -53,7 +53,7 @@ def translate(stringIn):
             output = output + " " + lj
             t = t + 1
         output = output.lower()
-        output = output[1:1].upper()+output[2:]
+        output = output[1:2].upper()+output[2:]
         
     return output
 
