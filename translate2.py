@@ -2,14 +2,14 @@ try:
     import fs
 except:
     raw_input("FATAL ERROR! fs.py missing, press enter to continue")
-from re import sub as re.sub
+from re import sub as resub
 
 def getLanguage():
     global language
     language = "this should not be used as a language name"
     while fs.exists("translations/"+language+".txt") == False and language.lower() != "pig latin":
         language = raw_input("Please enter the name of your language file located in the Translations folder\n")
-    return 
+    return language
 def getAddAll():
     addAllLocal = ""
     global dictionary
@@ -28,7 +28,7 @@ def translate(stringIn):
     global addAll
     global language
     if language.lower() != "pig latin":
-        stringIn = re.sub(r'([^\s\w]|_)+', '', stringIn)
+        stringIn = resub(r'([^\s\w]|_)+', '', stringIn)
         output = ""
         targets = stringIn.split(" ")
         t = 0
@@ -40,7 +40,7 @@ def translate(stringIn):
             t = t + 1
         output = output[1:]
     else:
-        stringIn = re.sub(r'([^\s\w]|_)+', '', stringIn)
+        stringIn = resub(r'([^\s\w]|_)+', '', stringIn)
         output = ""
         targets = stringIn.split(" ")
         t = 0
@@ -55,16 +55,17 @@ def translate(stringIn):
         output = output[1:]
     return output
 
-try:  
-    global addAll
-    global language
-    global dictionary
-    if language.lower != "pig latin":
-        dictionary = fs.interpret(fs.read("translations/"+getLanguage()+".txt"))
-    addAll = getAddAll()
-    print dictionary
-    while True:
-        input = raw_input("Enter a phrase to translate.\n")
-        print translate(input)
-except:
-    raw_input("FATAL ERROR! Press enter to continue...\n")
+
+global addAll
+global language
+global dictionary
+language = getLanguage()
+if language.lower() != "pig latin":
+    dictionary = fs.interpret(fs.read("translations/"+language+".txt"))
+else:
+    dictionary = {}
+addAll = getAddAll()
+print dictionary
+while True:
+    input = raw_input("Enter a phrase to translate.\n")
+    print translate(input)
