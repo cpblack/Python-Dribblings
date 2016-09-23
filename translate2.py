@@ -13,6 +13,12 @@ def getAddAll():
         addAllLocal = dictionary["*"]
         dictionary["*"] = "*"
     return addAllLocal
+def smartAddAll(string1, string2):
+    cutRepeats = True
+    output = string1 + string2
+    if cutRepeats and string1[-1:] == string2[0:1]:
+        output = string1[:-1] + string2
+    return output
 def translate(stringIn):
     global dictionary
     global addAll
@@ -22,9 +28,9 @@ def translate(stringIn):
     t = 0
     while t < len(targets):
         if targets[t] in dictionary:
-            output = output +" "+ dictionary[targets[t]] + addAll
+            output = output +" "+ smartAddAll(dictionary[targets[t]], addAll)
         else:
-            output = output +" "+ targets[t] + addAll
+            output = output +" "+ smartAddAll(targets[t],addAll)
         t = t + 1
     output = output[1:]
     return output
