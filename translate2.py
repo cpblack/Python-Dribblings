@@ -5,6 +5,7 @@ except:
 from re import sub as re.sub
 
 def getLanguage():
+    global language
     language = "this should not be used as a language name"
     while fs.exists("translations/"+language+".txt") == False and language.lower() != "pig latin":
         language = raw_input("Please enter the name of your language file located in the Translations folder\n")
@@ -25,6 +26,7 @@ def smartAddAll(string1, string2):
 def translate(stringIn):
     global dictionary
     global addAll
+    global language
     if language.lower() != "pig latin":
         stringIn = re.sub(r'([^\s\w]|_)+', '', stringIn)
         output = ""
@@ -55,6 +57,7 @@ def translate(stringIn):
 
 try:  
     global addAll
+    global language
     global dictionary
     if language.lower != "pig latin":
         dictionary = fs.interpret(fs.read("translations/"+getLanguage()+".txt"))
