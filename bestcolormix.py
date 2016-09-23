@@ -32,4 +32,4 @@ while True:
     currentColor = [(currentColor[0]+float(colors[addColor][1]))/2,(currentColor[1]+float(colors[addColor][2]))/2,(currentColor[2]+float(colors[addColor][3]))/2]
     colorName = nearestColor(currentColor)
     colorName = colorName[0]
-    print "Color:",colorName.title(),str(int(currentColor[0]/255*100))+"%,"+str(int(currentColor[1]/255*100))+"%,"+str(int(currentColor[2]/255*100))+"%"
+    print "\nColor:",colorName.title(),str(int(currentColor[0]/255*100))+"%,"+str(int(currentColor[1]/255*100))+"%,"+str(int(currentColor[2]/255*100))+"%"
