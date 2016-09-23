@@ -1,7 +1,0 @@
-blue:cyan
-red:yellow
-magenta:black
-violet:azure
-yellow:chartreuse green
-cyan:spring green
-orange:chatreuse green
