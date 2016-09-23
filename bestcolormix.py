@@ -5,7 +5,7 @@ def askColor():
     global colors
     colorReturn = "Do not make this a color name"
     while not colorReturn in colors:
-        colorReturn = raw_input("Please enter a color.\n")
+        colorReturn = raw_input("Please enter a color.\n").lower()
     return colorReturn
 def nearestColor(colorIn):
     global colors
