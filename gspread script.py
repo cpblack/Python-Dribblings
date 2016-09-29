@@ -15,7 +15,6 @@ def initialize():
 	
 	spreadsheet = gc.open_by_key("1npB50U4RIShkm-DCEiwCy50fIaXajTYscdyRHh5T4hY")
 	wks = spreadsheet.sheet1
-	wks.update_acell('B2', "He's alive bobby!")
 	initialized = True
 def write(cell,content):
 	global wks
