@@ -2,7 +2,8 @@
 #OAUTH2 LIBRARY FOUND HERE: https://github.com/google/oauth2client
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-def initialize():
+pluggedInSheetKey = "1npB50U4RIShkm-DCEiwCy50fIaXajTYscdyRHh5T4hY"
+def initialize(keyIn):
 	global gc
 	global wks
 	global spreadsheet
@@ -13,7 +14,7 @@ def initialize():
 	
 	gc = gspread.authorize(credentials)
 	
-	spreadsheet = gc.open_by_key("1npB50U4RIShkm-DCEiwCy50fIaXajTYscdyRHh5T4hY")
+	spreadsheet = gc.open_by_key(keyIn)
 	wks = spreadsheet.sheet1
 	initialized = True
 def write(cell,content):
@@ -23,5 +24,8 @@ def write(cell,content):
 	global gc
 	while initialized != True:
 		print "Initializing."
-		initialize()
+		initialize(pluggedInSheetKey)
 	wks.update_acell(cell,content)
+if __name__ == "__main__":
+	write(raw_input("Please enter a cell\n"),raw_input("Write what?"\n))
+	
