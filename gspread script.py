@@ -12,4 +12,4 @@ gc = gspread.authorize(credentials)
 spreadsheet = gc.open_by_key("1npB50U4RIShkm-DCEiwCy50fIaXajTYscdyRHh5T4hY")
 wks = spreadsheet.sheet1
 
-wks.update_acell('B2', "it's down there somewhere, let me take another look.")
+wks.update_acell('B2', "He's alive bobby!")
