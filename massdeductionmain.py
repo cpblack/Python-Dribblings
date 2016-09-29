@@ -11,6 +11,9 @@ def saveLog(name,state):
 
 
 print "Script Starting"
+scheduleT = file.open("schedule.txt","r")
+schedule = scheduleT.read().split("\n")
+scheduleT.close()
 while True:
     status = battery.powerStatus()
     sheets.write("b5",status.ACLineStatus)
