@@ -1,9 +1,12 @@
-#LIBRARY FOUND HERE: https://github.com/burnash/gspread
+#GSPREAD LIBRARY FOUND HERE: https://github.com/burnash/gspread
+#OAUTH2 LIBRARY FOUND HERE: https://github.com/google/oauth2client
 import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+scope = ['https://spreadsheets.google.com/feeds']
+
+credentials = ServiceAccountCredentials.from_json_keyfile_name('gspread-april-2cd … ba4.json', scope)
 
 gc = gspread.authorize(credentials)
 
-# Open a worksheet from spreadsheet with one shot
 wks = gc.open("Where is the money Lebowski?").sheet1
-
-wks.update_acell('B2', "it's down there somewhere, let me take another look.")
