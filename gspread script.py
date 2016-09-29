@@ -17,6 +17,15 @@ def initialize(keyIn):
 	spreadsheet = gc.open_by_key(keyIn)
 	wks = spreadsheet.sheet1
 	initialized = True
+def read(cell):
+	global wks
+	global spreadsheet
+	global initialized
+	global gc
+	while initialized != True:
+		print "Initializing."
+		initialize(pluggedInSheetKey)
+	val = wks.acell(cell).value
 def write(cell,content):
 	global wks
 	global spreadsheet
