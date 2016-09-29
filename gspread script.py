@@ -36,5 +36,6 @@ def write(cell,content):
 		initialize(pluggedInSheetKey)
 	wks.update_acell(cell,content)
 if __name__ == "__main__":
-	write(raw_input("Please enter a cell\n"),raw_input("Write what?\n"))
+	while True:
+		write(raw_input("Please enter a cell\n"),raw_input("Write what?\n"))
 	
