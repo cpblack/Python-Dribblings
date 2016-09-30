@@ -2,7 +2,7 @@
 global loggedIn
 global api
 global settings
-settings = {"logintype":"google","username":"tomatojerky@gmail.com","password":"thisisnottherealpassword"}
+settings = {"logintype":"google","username":"reallyisfakeIthink@gmial.com","password":"thisisnottherealpassword"}
 api = pgoapi.PGoApi()
 
 def login():
