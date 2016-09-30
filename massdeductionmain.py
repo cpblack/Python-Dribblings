@@ -13,6 +13,8 @@ def saveLog(name,state):
 print "Script Starting"
 scheduleT = file.open("schedule.txt","r")
 schedule = scheduleT.read().split("\n")
+for i,len(schedule):
+    schedule[t] = schedule[t].split(":")
 scheduleT.close()
 while True:
     status = battery.powerStatus()
