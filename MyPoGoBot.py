@@ -46,6 +46,7 @@ while loggedIn == False and loginAttempts < 6:
 		sleep(10)
 if loggedIn:
 	print "Login Success! Starting Script"
+	print api.get_player()
 	
 else:
 	print "Complete Login Failure!"
