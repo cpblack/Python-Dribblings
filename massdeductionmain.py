@@ -18,7 +18,6 @@ scheduleT.close()
 
 while False:
     status = battery.powerStatus()
-    sheets.write("b5",status.ACLineStatus)
     fs.save(fullDate()+".txt",status.ACLineStatus)
     print "Sleeping"
     time.sleep(3)
