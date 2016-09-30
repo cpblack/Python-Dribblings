@@ -31,6 +31,7 @@ def recycle():
 	req.release_pokemon(pokemon_id = <your_input>)
 	req.release_pokemon(pokemon_id = <your_input>)
 	response = req.call()
+	print "Recycle Pokemon Request Response:",response
 	
 
 #########################################
