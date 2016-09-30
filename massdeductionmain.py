@@ -15,10 +15,12 @@ schedule = scheduleT.read().split("\n")
 for i,len(schedule):
     schedule[t] = schedule[t].split(":")
 scheduleT.close()
-while True:
+
+while False:
     status = battery.powerStatus()
     sheets.write("b5",status.ACLineStatus)
     fs.save(fullDate()+".txt",status.ACLineStatus)
     print "Sleeping"
     time.sleep(3)
 
+print schedule
