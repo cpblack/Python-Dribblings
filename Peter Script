@@ -1,0 +1,15 @@
+global gradeIndex
+gradeIndex = [["A",97],["B",80],["D",60],["F",50]]
+studentFormat = {"History":"97","Mathematics":"65","US History":"56"}
+students = {}
+students["Example"] = studentFormat
+
+def getGradeLetter(percent):
+  global gradeIndex
+  t = 0
+  output = "Error"
+  while t < len(gradeIndex):
+    if gradeIndex[t][1] > percent:
+      output = gradeIndex[t][0]
+    t = t + 1
+  return output
