@@ -1,4 +1,6 @@
-# Possible Library to create documents https://github.com/google/gdata-python-client
+# Possible Library to create documents: https://github.com/google/gdata-python-client
+# Samples: https://github.com/google/gdata-python-client/tree/master/samples
+# Documentation: https://developers.google.com/gdata/articles/python_client_lib
 global gradeIndex
 gradeIndex = [["A",97],["B",80],["D",60],["F",50]]
 studentFormat = {"History":"97","Mathematics":"65","US History":"56"}
