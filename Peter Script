@@ -1,4 +1,5 @@
 # Possible Library to create documents: https://github.com/google/gdata-python-client
+# Great Example: http://pastebin.com/zADrcEJU
 # Samples: https://github.com/google/gdata-python-client/tree/master/samples
 # Documentation: https://developers.google.com/gdata/articles/python_client_lib
 global gradeIndex
