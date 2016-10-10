@@ -13,3 +13,4 @@ def getGradeLetter(percent):
       output = gradeIndex[t][0]
     t = t + 1
   return output
+  
